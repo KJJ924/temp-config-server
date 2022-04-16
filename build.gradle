@@ -28,9 +28,10 @@ subprojects {
 
     dependencies {
         implementation "org.springframework.cloud:spring-cloud-starter-config"
-        implementation "org.springframework.cloud:spring-cloud-config-server"
         implementation 'mysql:mysql-connector-java'
         implementation 'org.springframework.boot:spring-boot-starter-jdbc'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+        compileOnly 'org.projectlombok:lombok'
     }
 }
