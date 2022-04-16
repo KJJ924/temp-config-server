@@ -1,1 +1,15 @@
-
+spring:
+  profiles:
+    active:
+      - jdbc
+  datasource:
+    url: jdbc:mysql://localhost:3306/config_server
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    config:
+      enabled: true
+      server:
+        jdbc:
+          sql: select prop_key, prop_value from remote_properties where application=? and profile=? and label=?

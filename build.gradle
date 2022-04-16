@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '8'
 
 repositories {
     mavenCentral()
@@ -17,9 +17,10 @@ ext {
 }
 
 dependencies {
-    implementation("org.springframework.cloud:spring-cloud-starter-config")
-    implementation("org.springframework.cloud:spring-cloud-config-server")
-    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    implementation 'mysql:mysql-connector-java'
+    implementation "org.springframework.cloud:spring-cloud-starter-config"
+    implementation "org.springframework.cloud:spring-cloud-config-server"
+    implementation "org.springframework.boot:spring-boot-starter-jdbc"
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
