@@ -1,35 +1,36 @@
-plugins {
-    id 'org.springframework.boot' version '2.6.6'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-    id 'java'
-}
-
-group = 'com.example'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '8'
-
-repositories {
-    mavenCentral()
-}
-
-ext {
-    set('springCloudVersion', "2021.0.1")
-}
-
-dependencies {
-    implementation 'mysql:mysql-connector-java'
-    implementation "org.springframework.cloud:spring-cloud-starter-config"
-    implementation "org.springframework.cloud:spring-cloud-config-server"
-    implementation "org.springframework.boot:spring-boot-starter-jdbc"
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+buildscript {
+    ext {
+        springBootVersion = '2.6.6'
+        springCloudVersion = '2021.0.1'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE"
     }
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
+subprojects {
+    group 'me.jaejoon'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation "org.springframework.cloud:spring-cloud-starter-config"
+        implementation "org.springframework.cloud:spring-cloud-config-server"
+        implementation 'mysql:mysql-connector-java'
+        implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
 }

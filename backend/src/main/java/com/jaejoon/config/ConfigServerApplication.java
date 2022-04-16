@@ -1,4 +1,4 @@
-package com.jaejoon.configserver;
+package com.jaejoon.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,1 +1,3 @@
-rootProject.name = 'configserver'
+rootProject.name = 'config-server'
+include ':backend'
+

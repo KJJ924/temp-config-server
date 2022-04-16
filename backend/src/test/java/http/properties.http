@@ -1,6 +1,5 @@
 GET http://localhost:8080/jaejoon/local/test
 Accept: application/json
 
-<> 2022-04-17T021050.200.json
 
 ###
