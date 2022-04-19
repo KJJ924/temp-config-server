@@ -1,19 +1,40 @@
 package me.jaejoon.client.refresh;
 
-import lombok.ToString;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 @RefreshScope
 @Component
-@ToString
+@ConfigurationProperties("jaejoon")
 public class JaeJoonBean {
 
-    @Value("${name}")
     private String name;
 
-    @Value("${location}")
     private String location;
 
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "JaeJoonBean{" +
+                "name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }
