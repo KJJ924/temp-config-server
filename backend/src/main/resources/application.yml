@@ -8,8 +8,12 @@ spring:
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
+    bus:
+      destination: jaejoon-topic
     config:
       enabled: true
       server:
         jdbc:
           sql: select prop_key, prop_value from remote_properties where application=? and profile=? and label=?
+  kafka:
+    bootstrap-servers: http://localhost:9092

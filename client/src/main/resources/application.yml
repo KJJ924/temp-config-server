@@ -5,7 +5,9 @@ management:
   endpoints:
     web:
       exposure:
-        include: "refresh"
+        include:
+          - "refresh"
+          - "bus-refresh"
 
 spring:
   profiles:
@@ -23,3 +25,5 @@ spring:
       request-connect-timeout: 2000
       request-read-timeout: 10000
       label: test
+    bus:
+      destination: jaejoon-topic
