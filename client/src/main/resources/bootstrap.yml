@@ -21,5 +21,6 @@ spring:
       request-read-timeout: 10000
       label: test
       uri: http://localhost:12904
+      enabled: false
     bus:
       destination: pay-config-topic
