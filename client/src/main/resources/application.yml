@@ -1,29 +1,3 @@
 server:
   port: 12700
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include:
-          - "refresh"
-          - "bus-refresh"
-
-spring:
-  profiles:
-    active: local
-  config:
-    import: "optional:configserver:http://localhost:12904"
-  cloud:
-    config:
-      name: jaejoon
-      fail-fast: false
-      retry:
-        initial-interval: 1000
-        max-attempts: 5
-        multiplier: 1.1
-      request-connect-timeout: 2000
-      request-read-timeout: 10000
-      label: test
-    bus:
-      destination: jaejoon-topic

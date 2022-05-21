@@ -5,6 +5,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-bus-kafka")
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+    implementation ("org.springframework.cloud:spring-cloud-starter-bootstrap")
+
 
 
     runtimeOnly 'com.h2database:h2'
