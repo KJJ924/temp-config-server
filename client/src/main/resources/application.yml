@@ -1,5 +1,5 @@
 server:
-  port: 12600
+  port: 12700
 
 management:
   endpoints:
@@ -13,11 +13,11 @@ spring:
   profiles:
     active: local
   config:
-    import: "optional:configserver:http://localhost:8080"
+    import: "optional:configserver:http://localhost:12904"
   cloud:
     config:
       name: jaejoon
-      fail-fast: true
+      fail-fast: false
       retry:
         initial-interval: 1000
         max-attempts: 5

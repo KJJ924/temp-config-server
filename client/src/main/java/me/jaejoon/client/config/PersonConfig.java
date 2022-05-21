@@ -24,6 +24,8 @@ public class PersonConfig {
         private String name;
         private String location;
 
+        private String value;
+
 
         public String getName() {
             return name;
@@ -39,6 +41,14 @@ public class PersonConfig {
 
         public void setLocation(String location) {
             this.location = location;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public void setValue(String value) {
+            this.value = value;
         }
     }
 
