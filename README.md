@@ -21,9 +21,9 @@ kafka 명령어
 
 
 
-커스텀 PropertySourceLocator 등록시 `spring.cloud.config.enabled = false` 값을 주지않으면 
-PropertySourceLocator 이 2개  
-(구현한 custom 과 기존 ConfigServicePropertySourceLocator) 등록되어 config-server 로 부터 property 설정을 두번 가져오게된다.
+커스텀 PropertySourceLocator 등록시 `spring.cloud.config.enabled = false` 값을 주지않으면  
+PropertySourceLocator 이 2개(구현한 custom 과 기존 ConfigServicePropertySourceLocator)  
+등록되어 config-server 로 부터 property 설정을 두번 가져오게된다.
 
 ![image](https://user-images.githubusercontent.com/64793712/169665521-c8beea94-12ce-4a76-b4f6-b0b859054f99.png)
 
