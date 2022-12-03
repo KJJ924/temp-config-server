@@ -1,4 +1,5 @@
 rootProject.name = 'config-server'
 include ':backend'
 include ':client'
+include ':server'
 
