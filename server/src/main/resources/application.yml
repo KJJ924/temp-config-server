@@ -2,4 +2,12 @@ spring:
   cloud:
     config:
       enabled: false
+server:
+  port: 12200
 
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          client=DEBUG:
