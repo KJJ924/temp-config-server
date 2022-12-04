@@ -12,7 +12,7 @@ spring:
   cloud:
     config:
       name: jaejoon
-      fail-fast: false
+      fail-fast: true
       retry:
         initial-interval: 1000
         max-attempts: 5
@@ -20,7 +20,7 @@ spring:
       request-connect-timeout: 2000
       request-read-timeout: 10000
       label: test
-      uri: http://localhost:12904
+      uri: http://localhost:8080
       enabled: false
     bus:
       destination: pay-config-topic

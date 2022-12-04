@@ -1,3 +1,13 @@
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream, info, health
+
 spring:
   application:
     name: jaejoon-circuit

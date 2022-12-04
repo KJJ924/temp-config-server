@@ -11,9 +11,12 @@ spring:
     bus:
       destination: jaejoon-topic
     config:
+      monitor:
+        endpoint:
+          path: /api/v1/remote-config
       enabled: true
       server:
         jdbc:
-          sql: select prop_key, prop_value from remote_properties where application=? and profile=? and label=?
+          sql: select property_key, property_value from remote_properties where application=? and profile=? and label=?
   kafka:
     bootstrap-servers: http://localhost:9092

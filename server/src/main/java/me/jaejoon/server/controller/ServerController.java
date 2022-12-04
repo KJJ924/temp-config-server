@@ -18,7 +18,7 @@ public class ServerController {
     @GetMapping("/username/timeout")
     public String timeout() throws InterruptedException {
         log.info("username sleep start");
-        Thread.sleep(3000);
+        Thread.sleep(10000);
         log.info("username sleep end");
 
         return "jaejoon";
